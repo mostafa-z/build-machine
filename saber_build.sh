@@ -6,8 +6,17 @@ today=`date '+%Y_%m_%d__%H_%M_%S'`;
 
 ### build zzmoove
 ### Build kernel for G3
-if [ ! -e ./arch/arm/boot/*.dtb ]; then
-rm ./arch/arm/boot/*.dtb
+if [ ! -e arch/arm/boot/*.dtb ]; then
+rm arch/arm/boot/*.dtb
+rm arch/arm/boot/zImage-dtb
+rm arch/arm/boot/dt.img
+rm /media/dgod/kernel/kernel/output/boot.img
+rm /media/dgod/kernel/kernel/output/boot_bumped.img
+rm /media/dgod/kernel/kernel/output/ramdisk/dt.img
+rm /media/dgod/kernel/kernel/output/ramdisk/zImage-dtb
+rm /media/dgod/kernel/kernel/output/package/zz/boot.img
+rm /media/dgod/kernel/kernel/output/package/ps/boot.img
+rm /media/dgod/kernel/kernel/output/package/kernel.zip
 fi
 
 ### cleaning
@@ -80,8 +89,14 @@ fi
 
 ### build powersuspend
 
-if [ ! -e ./arch/arm/boot/*.dtb ]; then
-rm ./arch/arm/boot/*.dtb
+if [ ! -e arch/arm/boot/*.dtb ]; then
+rm arch/arm/boot/*.dtb
+rm arch/arm/boot/zImage-dtb
+rm arch/arm/boot/dt.img
+rm /media/dgod/kernel/kernel/output/boot.img
+rm /media/dgod/kernel/kernel/output/boot_bumped.img
+rm /media/dgod/kernel/kernel/output/ramdisk/dt.img
+rm /media/dgod/kernel/kernel/output/ramdisk/zImage-dtb
 fi
 
 ### cleaning
