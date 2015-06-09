@@ -1,0 +1,14 @@
+
+#build dependencies
+sudo apt-get install libncurses5-dev build-essential zip git-core lib32stdc++6 lib32z1 lib32z1-dev
+
+#dependency to make dtb
+export PATH=$PATH:tools/lz4demo
+
+#make command structure
+make ARCH=arm CROSS_COMPILE=/media/dgod/ext4/kernel/arm-cortex_a15-linux-gnueabihf-linaro_4.9.3-2015.03/bin/arm-cortex_a15-linux-gnueabihf- g3-global_com-perf_defconfig zImage-dtb -o3 -j4
+
+#dtbtool structure
+./dtbTool -s 2048 -o /media/dgod/ext4/kernel/msm8974ac/kernel-t/arch/arm/boot/dt.img -p /media/dgod/ext4/kernel/msm8974ac/kernel-t/scripts/dtc/ /media/dgod/ext4/kernel/msm8974ac/kernel-t/arch/arm/boot/
+
+
